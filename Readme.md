@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Vladimir Dyachenko](https://up.htmlacademy.ru/htmlcss/30/user/1520013).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Пак](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
