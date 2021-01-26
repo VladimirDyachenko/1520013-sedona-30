@@ -59,10 +59,19 @@
       </fieldset>
       <fieldset>
         <legend>Стоимость в сутки (Р):</legend>
-        <p>ОТ: 0</p>
-        <p>ДО: 3000</p>
-        <input type="range" id="price_min" name="price_min" min="0" max="2000" value="0">
-        <input type="range" id="price_max" name="price_max" min="2000" max="4000" value="3500">
+        <p>
+          <label for="price_min">ОТ
+            <input type="number" id="price_min" name="price_min" min="0" max="4000" value="0">
+          </label>
+          <label for="price_max">ДО
+            <input type="number" id="price_max" name="price_max" min="0" max="4000" value="3000">
+          </label>
+        </p>
+        <div class="range-outer">
+          <button type="button"></button>
+          <div class="range-inner"></div>
+          <button type="button"></button>
+        </div>
       </fieldset>
       <input type="submit" value="Показать">
     </form>
