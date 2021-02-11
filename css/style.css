@@ -76,6 +76,30 @@ html {
 
 /* Header */
 
+.main-header-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.main-nav {
+  padding: 0 72px;
+}
+
+.nav-list {
+  display: grid;
+  grid-template-columns: 228px 516px 232px auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 15px 0;
+}
+
 .nav-item a {
   line-height: 26px;
   font-weight: 700;
@@ -265,38 +289,61 @@ html {
   bottom: 0;
   transform: translateY(100%);
   grid-template-areas:
-    "move-in move-in"
-    "move-out move-out"
-    "adults children"
-    "find find";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   padding: 55px;
   width: 568px;
   height: 395px;
   background-color: var(--content-area-background);
   outline: 5px solid red;
-  outline-offset: -5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr) auto;
+  justify-items: end;
 }
 
 .move-in-field {
   grid-area: move-in;
-}
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+ }
 
 .move-out-field {
   grid-area: move-out;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
 }
 
 .adults-field {
   grid-area: adults;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
 }
 
 .children-field {
   grid-area: children;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.move-in-field input,
+.move-out-field input {
+  width: 346px;
+}
+
+.adults-field input,
+.children-field input {
+  width: 114px;
 }
 
 .find-form input {
-  grid-area: find;
+.find-form__item {
+  display: flex;
+  align-items: center;
+  place-self: baseline;
+  justify-self: end;
+}
+
+.find-form__item input {
+  padding: 6px 0;
 }
 
 .find-form__item,
@@ -373,7 +420,11 @@ html {
   color: var(--secondary-text-color);
   font-weight: 700;
   padding: 0;
+  padding: 16px 0;
   margin: 0;
+  grid-row: 4 / 5;
+  width: 100%;
+  border: none;
 }
 
 .form-find__button:hover {
