@@ -284,16 +284,13 @@ html {
 }
 
 .find-form {
-  display: grid;
   position: absolute;
   bottom: 0;
   transform: translateY(100%);
-  grid-template-areas:
   padding: 55px;
   width: 568px;
   height: 395px;
   background-color: var(--content-area-background);
-  outline: 5px solid red;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 1fr) auto;
@@ -301,25 +298,21 @@ html {
 }
 
 .move-in-field {
-  grid-area: move-in;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
  }
 
 .move-out-field {
-  grid-area: move-out;
   grid-column: 1 / -1;
   grid-row: 2 / 3;
 }
 
 .adults-field {
-  grid-area: adults;
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
 
 .children-field {
-  grid-area: children;
   grid-column: 2 / 4;
   grid-row: 3 / 4;
 }
@@ -334,7 +327,6 @@ html {
   width: 114px;
 }
 
-.find-form input {
 .find-form__item {
   display: flex;
   align-items: center;
@@ -350,6 +342,7 @@ html {
 .find-form__item input {
   line-height: 26px;
   font-weight: 700;
+  border: none;
 }
 
 .find-form__item input {
@@ -419,9 +412,9 @@ html {
   line-height: 26px;
   color: var(--secondary-text-color);
   font-weight: 700;
-  padding: 0;
   padding: 16px 0;
   margin: 0;
+  grid-column: 1 / -1;
   grid-row: 4 / 5;
   width: 100%;
   border: none;
