@@ -99,21 +99,11 @@ html {
 
 .index-grid-continer {
   display: grid;
-  grid-template-areas:
-    "welcome welcome welcome"
-    "introduction introduction introduction"
-    "first-reason first-reason first-reason"
-    "features features features"
-    "second-reason second-reason second-reason"
-    "reason-list reason-list reason-list"
-    "call-to-action call-to-action call-to-action"
-    "map map map";
   grid-template-columns: repeat(3, 400px);
-  grid-template-rows: repeat(8, auto);
 }
 
 .welcome-block {
-  grid-area: welcome;
+  grid-column: 1 / -1;
   position: relative;
   height: 509px;
 }
@@ -122,33 +112,40 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -51%);
 }
 
 .introduction {
-  grid-area: introduction;
   min-height: 216px;
+  grid-column: 1 / -1;
+  padding: 42.5px 0 51px 0;
+  text-align: center;
 }
 
 .introduction__header {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 42px;
 }
 
 .introduction__paragraph {
   line-height: 26px;
   color: var(--primary-text-lighter-color);
+  margin: 0;
 }
 
 .reason-accent {
   min-height: 256px;
 }
+
 .first-reason {
-  grid-area: first-reason;
+  grid-column: 1 / -1;
 }
 
 .text-block {
+  padding: 47px 0 54px 0;
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
   width: 100%;
@@ -156,14 +153,25 @@ html {
 
 .text-block__header {
   font-size: 21px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.text-block__index {
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.text-block__paragraph{
+  margin: 0 0 23px 0;
 }
 
 .features-list {
-  grid-area: features;
+  grid-column: 1 / -1;
   min-height: 330px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 60px 0 82px 0;
 }
 
 .features-list-item {
@@ -180,16 +188,16 @@ html {
 }
 
 .second-reason {
-  grid-area: second-reason;
+  grid-column: 1 / -1;
 }
 
 .reason-list {
   background-color: var(--secondary-background);
-  grid-area: reason-list;
+  grid-column: 1 / -1;
   min-height: 256px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 47px 0 54px 0;
 }
 
 .reason-list-item {
@@ -207,11 +215,12 @@ html {
 }
 
 .call-to-action {
-  grid-area: call-to-action;
+  grid-column: 1 / -1;
   min-height: 291px;
-  place-self: center;
+  justify-items: center;
   display: grid;
-  align-content: space-between;
+  padding: 55px 0 0 0;
+  position: relative;
 }
 
 .call-to-action__header {
@@ -219,14 +228,13 @@ html {
   line-height: 24px;
   font-weight: 700;
   margin: 0 auto;
-  margin-top: 58px;
+  margin-bottom: 10px;
+  width: 306px;
 }
 
 .call-to-action__paragraph {
   line-height: 24px;
-  width: 435px;
-  min-height: 95px;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
 }
 
@@ -236,8 +244,10 @@ html {
   line-height: 26px;
   color: var(--secondary-text-color);
   font-weight: 700;
-  height: 86px;
+  padding: 30px 0;
   width: 568px;
+  align-self: end;
+  border: none;
 }
 
 .call-to-action__button:hover {
@@ -251,6 +261,9 @@ html {
 
 .find-form {
   display: grid;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
   grid-template-areas:
     "move-in move-in"
     "move-out move-out"
@@ -261,7 +274,7 @@ html {
   padding: 55px;
   width: 568px;
   height: 395px;
-
+  background-color: var(--content-area-background);
   outline: 5px solid red;
   outline-offset: -5px;
 }
@@ -373,7 +386,7 @@ html {
 }
 
 .map {
-  grid-area: map;
+  grid-column: 1 / -1;
   height: 594px;
 }
 
