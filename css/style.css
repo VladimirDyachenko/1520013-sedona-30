@@ -625,7 +625,7 @@ html {
 
 .hotel-form {
   display: grid;
-  grid-template-columns: 253px 274px 1fr;
+  grid-template-columns: 255px 274px 1fr;
   grid-template-rows: 1fr auto;
 }
 
@@ -669,6 +669,10 @@ html {
   margin-bottom: 0;
 }
 
+.hotel-form-input-checkbox + label {
+  cursor: pointer;
+}
+
 .hotel-form-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -677,7 +681,7 @@ html {
   width: 27px;
   height: 23px;
   background-image: url("../img/inputs/checkbox.svg");
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
 }
 
 .hotel-form-input-checkbox:checked + label::before {
@@ -688,7 +692,7 @@ html {
   width: 27px;
   height: 23px;
   background-image: url("../img/inputs/checkbox-checked.svg");
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
 }
 
 .hotel-form-input-checkbox:checked:disabled + label::before {
@@ -711,7 +715,6 @@ html {
   justify-self: end;
   margin-right: 95px;
   padding: 7px 35px 8px 35px;
-
 }
 
 .hotel-form__submit-button:hover {
@@ -919,6 +922,7 @@ html {
   border: none;
   align-self: end;
   justify-self: start;
+  cursor: pointer;
 }
 
 .hotel__book-button:hover {
@@ -962,7 +966,6 @@ html {
   display: flex;
   justify-content: center;
 }
-
 
 .price-control .spacer {
   width: 2px;
@@ -1019,7 +1022,7 @@ html {
 }
 
 .range-control .toggle-min {
-  left: 0px
+  left: 0px;
 }
 
 .range-control .toggle-max {
@@ -1031,7 +1034,6 @@ html {
   width: 5px;
   height: 5px;
 }
-
 
 .visually-hidden {
   position: absolute;
