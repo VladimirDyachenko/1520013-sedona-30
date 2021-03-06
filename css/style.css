@@ -40,8 +40,8 @@
   --rating-text-color: #666666;
   --icon-color: #a9a9a9;
   --catalog-spiter-color: #e5e5e5;
-
-  --ABABAB: #ABABAB;
+  --footer-background: #ffffffe6;
+  --ABABAB: #ababab;
 }
 
 img {
@@ -77,6 +77,7 @@ html {
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
   display: grid;
   grid-template-rows: auto 1fr auto;
+  position: relative;
 }
 
 /* Header */
@@ -326,58 +327,43 @@ html {
 
 .find-form {
   position: absolute;
-  bottom: 0;
-  transform: translateY(100%);
+  top: 291px;
   padding: 55px;
   width: 568px;
-  height: 395px;
   background-color: var(--content-area-background);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr) auto;
-  justify-items: end;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-}
-
-.move-in-field {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-}
-
-.move-out-field {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-}
-
-.adults-field {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
-
-.children-field {
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
-}
-
-.move-in-field input,
-.move-out-field input {
-  width: 346px;
-}
-
-.adults-field input,
-.children-field input {
-  width: 114px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  z-index: 1;
 }
 
 .find-form__item {
+  position: relative;
+  justify-content: space-between;
   display: flex;
-  align-items: center;
-  place-self: baseline;
-  justify-self: end;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  align-content: flex-start;
+  margin-bottom: 29px;
+}
+
+.adults-field {
+  flex-basis: 49%;
+}
+
+.children-field {
+  flex-basis: 39%;
 }
 
 .find-form__item input {
   padding: 6px 0;
+  text-transform: uppercase;
+}
+
+.find-form__item label {
+  align-self: center;
 }
 
 .find-form__item,
@@ -385,6 +371,18 @@ html {
   line-height: 26px;
   font-weight: 700;
   border: none;
+}
+
+.move-in-field input,
+.move-out-field input {
+  width: 346px;
+  padding-left: 14px;
+}
+
+.adults-field input,
+.children-field input {
+  width: 114px;
+  text-align: center;
 }
 
 .find-form__item input {
@@ -397,12 +395,16 @@ html {
 
 .find-form__item input:focus {
   background-color: var(--content-area-background);
+  outline: 2px solid var(--catalog-spiter-color);
 }
 
 .find-form-calendar__button {
   fill: var(--icon-color);
   background: none;
   border: none;
+  position: absolute;
+  top: 7px;
+  right: 3px;
 }
 
 .find-form-calendar__button:hover {
@@ -419,6 +421,22 @@ html {
 
 .find-form-calendar__svg path {
   fill: inherit;
+}
+
+.find-form-plus__button {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.find-form-minus__button {
+  position: absolute;
+  top: 7px;
+  left: 120px;
+}
+
+.children-field .find-form-minus__button {
+  left: 73px;
 }
 
 .find-form-plus__button,
@@ -456,10 +474,10 @@ html {
   font-weight: 700;
   padding: 16px 0;
   margin: 0;
-  grid-column: 1 / -1;
-  grid-row: 4 / 5;
   width: 100%;
   border: none;
+  flex-grow: 0;
+  margin-top: 26px;
 }
 
 .form-find__button:hover {
@@ -485,8 +503,16 @@ html {
 
 .page-footer {
   display: grid;
-  grid-template-rows: 120px;
   grid-template-columns: repeat(3, 1fr);
+  background-color: var(--footer-background);
+  min-height: 120px;
+}
+
+.page-footer-index {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .contacts {
@@ -508,8 +534,8 @@ html {
 }
 
 .contacts__hashtag {
+  margin-top: 21px;
   margin-bottom: 9px;
-  margin-top: 23px;
 }
 
 .social-links__list {
@@ -517,8 +543,9 @@ html {
   margin: 0;
   padding: 0;
   display: flex;
+  height: 100%;
   place-content: center;
-  padding-top: 36px;
+  align-items: center;
 }
 
 .social-links__item {
@@ -559,7 +586,7 @@ html {
   color: var(--primary-text-color);
   display: block;
   position: relative;
-  margin-top: 23px;
+  margin-top: 21px;
 }
 
 .made-by-link__svg {
