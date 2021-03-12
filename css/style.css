@@ -852,7 +852,7 @@ html {
 
 .hotel__header {
   font-size: 21px;
-  line-height: 14px;
+  line-height: 26px;
   font-weight: 700;
   grid-column: 2 / 4;
   grid-row: 1 / 2;
@@ -860,6 +860,8 @@ html {
   align-self: start;
   width: max-content;
   color: var(--primary-text-color);
+  margin-top: -6px;
+  max-width: 100%;
 }
 
 .hotel__header:hover {
