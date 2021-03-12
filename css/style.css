@@ -98,8 +98,8 @@ html {
 }
 
 .nav-list {
-  display: grid;
-  grid-template-columns: 228px 516px 232px auto;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -107,6 +107,15 @@ html {
 
 .nav-item {
   padding: 15px 0;
+  flex-basis: 228px;
+}
+
+.nav-item:nth-child(3) {
+  margin-left: auto;
+}
+
+.nav-item:nth-last-child(-n+2) {
+  text-align: end;
 }
 
 .nav-item a {
