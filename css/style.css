@@ -114,7 +114,7 @@ html {
   margin-left: auto;
 }
 
-.nav-item:nth-last-child(-n+2) {
+.nav-item:nth-last-child(-n + 2) {
   text-align: end;
 }
 
