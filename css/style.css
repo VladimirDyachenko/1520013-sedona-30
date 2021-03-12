@@ -39,9 +39,12 @@
   --sort-icon-color: #cacaca;
   --rating-text-color: #666666;
   --icon-color: #a9a9a9;
-  --catalog-spiter-color: #e5e5e5;
+  --catalog-spliter-color: #e5e5e5;
   --footer-background: #ffffffe6;
-  --ABABAB: #ababab;
+  --range-control-background-color: #ababab;
+  --page-shadow-color: #00010133;
+  --find-form-shadow-color: #00010126;
+  --range-control-shadow-color: #ababab4d;
 }
 
 img {
@@ -74,7 +77,7 @@ html {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--content-area-background);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--page-shadow-color);
   display: grid;
   grid-template-rows: auto 1fr auto;
   position: relative;
@@ -331,7 +334,7 @@ html {
   padding: 55px;
   width: 568px;
   background-color: var(--content-area-background);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--find-form-shadow-color);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -395,7 +398,7 @@ html {
 
 .find-form__item input:focus {
   background-color: var(--content-area-background);
-  outline: 2px solid var(--catalog-spiter-color);
+  outline: 2px solid var(--catalog-spliter-color);
 }
 
 .find-form-calendar__button {
@@ -724,7 +727,7 @@ html {
 }
 
 .search-result-sort {
-  border-bottom: 1px solid var(--catalog-spiter-color);
+  border-bottom: 1px solid var(--catalog-spliter-color);
   padding: 10px 73px 10px 73px;
   display: grid;
   grid-template-columns: auto auto 1fr auto auto;
@@ -836,7 +839,7 @@ html {
   grid-template-rows: repeat(3, 1fr);
   padding: 30px 73px 30px 73px;
   min-height: 150px;
-  border-bottom: 1px solid var(--catalog-spiter-color);
+  border-bottom: 1px solid var(--catalog-spliter-color);
 }
 
 .hotels-list__item > img {
@@ -1014,10 +1017,10 @@ html {
   box-sizing: content-box;
   width: 4px;
   height: 4px;
-  background-color: var(--ABABAB);
+  background-color: var(--range-control-background-color);
   border: 8px solid var(--secondary-text-color);
   border-radius: 50%;
-  box-shadow: 0px 2px 0px rgba(171, 171, 171, 0.3);
+  box-shadow: 0px 2px 0px var(--range-control-shadow-color);
   cursor: pointer;
 }
 
