@@ -345,6 +345,18 @@ html {
   align-content: flex-start;
   justify-content: space-between;
   z-index: 1;
+  animation: openAnimation 500ms ease-in-out forwards;
+}
+
+@keyframes openAnimation {
+  from {
+    top: 90px;
+    transform: scaleY(0);
+  }
+  to {
+    top: 291px;
+    transform: scaleY(1);
+  }
 }
 
 .find-form__item {
@@ -1058,4 +1070,8 @@ html {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.hidden {
+  display: none;
 }
