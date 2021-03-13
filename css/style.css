@@ -330,7 +330,6 @@ html {
   justify-items: center;
   display: grid;
   padding: 55px 0 0 0;
-  position: relative;
 }
 
 .call-to-action__header {
@@ -347,15 +346,18 @@ html {
   text-align: center;
 }
 
+.form-wrapper {
+  position: relative;
+  align-self: end;
+}
+
 .call-to-action__button {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   color: var(--secondary-text-color);
   background-color: var(--button-background);
-  padding: 30px 0;
-  width: 568px;
-  align-self: end;
+  padding: 30px 140px;
   border: none;
 }
 
@@ -370,9 +372,9 @@ html {
 
 .find-form {
   position: absolute;
-  top: 291px;
+  top: 86px;
   padding: 55px;
-  width: 568px;
+  min-width: 568px;
   background-color: var(--content-area-background);
   box-shadow: 0px 7px 15px var(--find-form-shadow-color);
   display: flex;
@@ -380,17 +382,16 @@ html {
   align-content: flex-start;
   justify-content: space-between;
   z-index: 1;
-  animation: openAnimation 500ms ease-in-out forwards;
+  animation: openAnimation .35s ease-in-out forwards;
 }
 
 @keyframes openAnimation {
   from {
-    top: 90px;
-    transform: scaleY(0);
+    transform:  translateY(-198px) scaleY(0);
+    display: none;
   }
   to {
-    top: 291px;
-    transform: scaleY(1);
+    transform:  translateY(0px) scaleY(1);
   }
 }
 
