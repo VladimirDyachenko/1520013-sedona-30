@@ -73,7 +73,7 @@ html {
   padding: 0;
 }
 
-.page-body {
+.container {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--content-area-background);
