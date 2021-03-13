@@ -437,6 +437,7 @@ html {
 .children-field input {
   width: 114px;
   text-align: center;
+  padding-left: 17px;
 }
 
 .find-form__item input {
