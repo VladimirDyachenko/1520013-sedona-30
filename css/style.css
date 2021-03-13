@@ -727,6 +727,11 @@ html {
   background-image: url("../img/inputs/checkbox-disabled.svg");
 }
 
+.hotel-form-input-checkbox:focus + label::before {
+  outline-style: auto;
+  outline-offset: 3px;
+}
+
 .price-control {
   margin-top: 10.5px;
   border: 2px solid var(--content-area-background);
@@ -850,7 +855,7 @@ html {
 .search-result-sort__list button:hover {
   color: var(--accent-color);
   border: none;
-  border-bottom: 1px dashed var(--accent-color);
+  border-bottom: 1px dotted var(--accent-color);
   opacity: 1;
 }
 
@@ -868,7 +873,7 @@ html {
 .search-result-sort__item button {
   opacity: 0.3;
   padding: 0;
-  border-bottom: 1px dashed var(--accent-color);
+  border-bottom: 1px dotted var(--accent-color);
   text-transform: uppercase;
   font-size: 12px;
   line-height: 18px;
@@ -945,6 +950,7 @@ html {
   grid-column: 1 / 2;
   grid-row: 1 / 4;
   height: 90px;
+  width: auto;
   margin-right: 29px;
   align-self: center;
 }
