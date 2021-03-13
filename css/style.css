@@ -236,6 +236,7 @@ html {
 }
 
 .features-list-item {
+  position: relative;
   width: 100%;
 }
 
@@ -246,7 +247,40 @@ html {
 .features-list-item__header {
   font-size: 21px;
   font-weight: 700;
-  margin: 20px 0 27px 0;
+  margin: 98px 0 27px 0;
+}
+
+.housing::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 162px;
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/housing.svg");
+  background-repeat: no-repeat;
+}
+
+.food::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 162px;
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/food.svg");
+  background-repeat: no-repeat;
+}
+
+.souvenirs::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 168px;
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/souvenirs.svg");
+  background-repeat: no-repeat;
 }
 
 .features-list-item__paragraph {
