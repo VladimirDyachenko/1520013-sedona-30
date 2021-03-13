@@ -110,12 +110,13 @@ html {
   flex-basis: 228px;
 }
 
-.nav-item:nth-child(3) {
+.nav-item:nth-child(4n + 3) {
   margin-left: auto;
 }
 
-.nav-item:nth-last-child(-n + 2) {
-  text-align: end;
+.nav-item:nth-child(4n + 3),
+.nav-item:nth-child(4n + 4) {
+  text-align: right;
 }
 
 .nav-item a {
@@ -784,7 +785,7 @@ html {
 
 .price-control label {
   width: 100%;
-  text-align: end;
+  text-align: right;
   padding: 5px 0px 6px 0px;
 }
 
@@ -1088,7 +1089,7 @@ html {
   grid-column: 4 / 5;
   grid-row: 1 / 4;
   justify-self: end;
-  text-align: end;
+  text-align: right;
   align-self: start;
   height: 100%;
   display: flex;
