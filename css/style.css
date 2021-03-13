@@ -753,6 +753,14 @@ html {
   padding: 5px 0px 6px 0px;
 }
 
+.price-control label[for="price_min"]::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background: var(--content-area-background);
+}
+
 .price-control input {
   border: none;
   padding-right: 14px;
@@ -792,6 +800,7 @@ html {
   border-radius: 50%;
   box-shadow: 0px 2px 0px var(--range-control-shadow-color);
   cursor: pointer;
+  padding: 0;
 }
 
 .range-control .toggle-min {
