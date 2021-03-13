@@ -926,7 +926,7 @@ html {
   cursor: pointer;
 }
 
-.search-results-button__active button {
+.search-result-sort__item--active button {
   color: var(--accent-color);
   border: none;
   opacity: 1;
@@ -957,7 +957,7 @@ html {
   transform: rotateX(180deg);
 }
 
-.search-result-sort__selected .search-result-sort__svg {
+.search-result-sort__button--selected .search-result-sort__svg {
   fill: var(--accent-color);
 }
 
