@@ -73,6 +73,10 @@ html {
   padding: 0;
 }
 
+.page-body {
+  min-width: 1200px;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
