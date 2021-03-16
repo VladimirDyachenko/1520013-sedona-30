@@ -422,6 +422,15 @@ html {
   padding: 6px 0;
 }
 
+.find-form__item input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.find-form__item input[type=number]::-webkit-inner-spin-button,
+.find-form__item input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 .find-form__item label {
   align-self: center;
 }
@@ -443,7 +452,6 @@ html {
 .children-field input {
   width: 114px;
   text-align: center;
-  padding-left: 17px;
 }
 
 .find-form__item input {
@@ -778,7 +786,7 @@ html {
   border: 2px solid var(--content-area-background);
   border-radius: 2px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .price-control .spacer {
@@ -789,9 +797,12 @@ html {
 }
 
 .price-control label {
-  width: 100%;
-  text-align: right;
   padding: 5px 0px 6px 0px;
+  margin-left: 52px;
+}
+
+.price-control label[for="price_min"] {
+  margin-left: 65px;
 }
 
 .price-control label[for="price_min"]::after {
@@ -804,11 +815,21 @@ html {
 
 .price-control input {
   border: none;
-  padding-right: 14px;
+  width: 81px;
 }
 
-.price-control input[id="price_max"] {
-  padding-right: 22px;
+.price-control input[id="price_min"] {
+  width: 72px;
+  padding-left: 0px;
+}
+
+.price-control input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.price-control input[type=number]::-webkit-inner-spin-button,
+.price-control input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .range-control {
@@ -849,7 +870,7 @@ html {
 }
 
 .range-control .toggle-max {
-  left: 251px;
+  left: 252px;
 }
 
 .range-control .toggle:hover,
@@ -869,7 +890,7 @@ html {
   border-radius: 2px;
   justify-self: end;
   margin-right: 95px;
-  padding: 7px 35px 8px 35px;
+  padding: 8px 35px;
   cursor: pointer;
 }
 
@@ -1054,7 +1075,7 @@ html {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   margin-right: 6px;
-  padding: 3px 16px 3px 17px;
+  padding: 3px 17px;
   align-self: end;
 }
 
