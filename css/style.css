@@ -929,7 +929,7 @@ html {
 
 .search-result-sort {
   border-bottom: 1px solid var(--catalog-spliter-color);
-  padding: 10px 73px 10px 73px;
+  padding: 10px 73px;
   display: grid;
   grid-template-columns: auto auto 1fr auto auto;
   grid-template-rows: 1fr;
@@ -947,6 +947,7 @@ html {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
@@ -1038,8 +1039,8 @@ html {
 .hotels-list__item {
   display: grid;
   grid-template-columns: auto auto 1fr auto;
-  grid-template-rows: repeat(3, 1fr);
-  padding: 30px 73px 30px 73px;
+  grid-template-rows: auto auto 1fr;
+  padding: 30px 73px;
   min-height: 150px;
   border-bottom: 1px solid var(--catalog-spliter-color);
 }
@@ -1047,8 +1048,8 @@ html {
 .hotels-list__item > img {
   grid-column: 1 / 2;
   grid-row: 1 / 4;
-  height: 90px;
-  width: auto;
+  height: auto;
+  width: 135px;
   margin-right: 29px;
   align-self: center;
 }
@@ -1061,6 +1062,7 @@ html {
   grid-row: 1 / 2;
   margin: 0;
   margin-top: -6px;
+  margin-bottom: 10px;
   align-self: start;
   width: max-content;
   color: var(--primary-text-color);
@@ -1078,20 +1080,31 @@ html {
 
 .hotte__type,
 .hotte__price {
+  line-height: 14px;
   color: var(--primary-text-lighter-color);
   margin: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  min-width: 116px;
 }
 
 .hotte__type {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  line-height: 14px;
 }
 
 .hotte__price {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
-  line-height: 14px;
+}
+
+.hotel__actions {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  align-content: flex-end;
 }
 
 .hottel__details-link {
@@ -1099,10 +1112,9 @@ html {
   font-weight: 700;
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  padding: 3px 16px 3px 17px;
   margin-right: 6px;
-  padding: 3px 17px;
+  margin-top: 6px;
   align-self: end;
 }
 
@@ -1120,9 +1132,9 @@ html {
   font-weight: 700;
   color: var(--secondary-text-color);
   background-color: var(--button-background);
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;
-  padding: 3px 17px;
+  padding: 3px 17px 3px 16px;
+  margin-right: 6px;
+  margin-top: 6px;
   border: none;
   align-self: end;
   justify-self: start;
