@@ -719,6 +719,7 @@ html {
 .hotel-filter-block {
   background: no-repeat center url("../img/catalog/catalog-background.jpg");
   background-color: var(--catalog-filter-background-color);
+  background-size: cover;
   padding: 26.5px 73px 31px 72px;
   min-height: 217px;
 }
